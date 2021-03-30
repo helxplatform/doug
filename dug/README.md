@@ -1,59 +1,113 @@
 
 # Dug: digging up dark data
 
-Dug applies semantic web and knowledge graph methods to improve the [FAIR](https://www.go-fair.org/fair-principles/)-ness of research data.
+## What is Dug?
+Dug is a framework for semantic search over biological data, developed for the NHLBI BioData Catalyst Project.  Dug applies semantic web and knowledge graph methods to improve the [FAIR](https://www.go-fair.org/fair-principles/)-ness of research data in the NHLBI BioData Catalyst Ecosystem.
 
-As an example, [dbGaP](https://www.ncbi.nlm.nih.gov/gap/) is a rich source of metadata about biomedical knowledge derived from clinical research like the underutilized [TOPMed](https://www.nhlbiwgs.org/) data sets. A key obstacle to leveraging this knowledge is the lack of researcher tools to navigate from a set of concepts of interest towards relevant study variables. In a word, **search**. 
+## Why is Dug?
+In general, biological data are messy and lack global standards.  As an example, while [dbGaP](https://www.ncbi.nlm.nih.gov/gap/) is a rich source of metadata about biomedical knowledge derived from clinical research like the underutilized [TOPMed](https://www.nhlbiwgs.org/) data sets, there are no standards governing the variable names nor is there any mapping of variables to ontologies within the system. Separate efforts, like the [65 phenos project](https://www.nhlbiwgs.org/dcc-pheno) undertaken by the TOPMed DCC, have been successful at harmonizing TOPMed variables across datasets.  However, finding unharmonized dbGaP variables can be a challenge for resaerchers to find via text-based search - a key obstacle to leveraging this knowledge is the lack of researcher tools to navigate from a set of concepts of interest towards relevant study variables. In a word, **search**. 
 
-While other approaches to searching this data exist, our focus is semantic search: For us, "relevant" is defined as having a basis in curated, peer reviewed ontologically represented biomedical knowledge. Given a search term, Dug returns results that are related based on connections in ontological biomedical knowledge graphs.
+While other approaches to searching this data exist, our focus is **semantic search**. For us, "relevant" is defined as having a basis in curated, peer reviewed ontologically represented biomedical knowledge. Given a search term, Dug returns results that are related based on connections in ontological biomedical knowledge graphs.  These results are 'auditable' in that the underlying knowledge graph provided to the user by Dug helps explain the results, allowing a researcher to use their expertise in determining whether the result is relevant to them.  Thus, Dug understands that "Heart attack" and "Myocardial infraction" are conceptually the same thing, offering an improvement over purely text-based (lexical) search.
 
-To achieve this, we annotate study metadata with terms from [biomedical ontologies](http://www.obofoundry.org/), contextualize them within a unifying [upper ontology](https://biolink.github.io/biolink-model/) allowing study data to be federated with [larger knowledge graphs](https://researchsoftwareinstitute.github.io/data-translator/), and create a full text search index based on those knowledge graphs.
+**TODO: Image here**
+
+## How does Dug work?
+To achieve this, we annotate metadata with terms from [biomedical ontologies](http://www.obofoundry.org/) and contextualize them within a unifying [upper ontology](https://biolink.github.io/biolink-model/), allowing study data to be federated with [larger knowledge graphs](https://researchsoftwareinstitute.github.io/data-translator/) and create a full text search index based on those knowledge graphs.
+
+Further, Dug organizes variables by concept (ontological term), so in addition to providing semantic search results, it functions as a **first-step automated harmonization tool**, as well as displaying manually-harmonized results such as the TOPMed phenotype.  For example, if a researcher were to search "heart attack", the TOPMed harmonized phenotype concept "Myocardial Infarction" would be returned, as well as any other relevant ontological terms such as [MONDO:5068 - myocardial infarction (disease)](http://purl.obolibrary.org/obo/MONDO_0005068).  Relevant variables are returned below these concepts, connected to them through external, manual efforts (e.g. TOPMed) or automatically through the annotation process.
+
+**TODO: Image Needed**
+
+Finally, Dug is **data structure-agnostic**, meaning it can easily make any collection of biological objects searchable. Dug can search over variables in BioData Catalyst for which metadata is available, which at the time of writing is dbGaP variables and harmonized TOPMed phenotype concepts.  In the near future we anticipate enabling search over other types of data as they become avaible in BioData Catalyst, such as DICOM image data, COVID clinical trial data, etc.  Dug comprises three interconnected data structures:
+
+1. **Variables**: A variable is the most granular element of biomedical data that we deal with, and contains metadata about the variable itself (name, description), any relevant dataset metadata, and study metadata about the study to which the variable belongs.  
+2. **Concepts**: Concepts are semantic organizers of variables, and occasionally other concepts.  They are either extant (TOPmed phenotype concepts) or generated via annotation of variable metadata (ontological terms) 
+3. **Knowledge Graphs**: Knowledge graphs connect concepts with other concepts, contextualized within the upper ontology biolink model.  It enables semantic search over concepts and their constitutent variables.
+
 
 ## The Dug Framework
+The Dug Framework consists of five primary domains:
 
-Dug's **ingest** uses the [Biolink](https://biolink.github.io/biolink-model/) upper ontology to annotate knowledge graphs and structure queries used to drive full text indexing and search. It uses Monarch Initiative APIs to perform named entity recognition on natural language prose to extract ontology identifiers. It also uses Translator normalization services to find preferred identifiers and Biolink types for each extracted identifier. The final step of ingest is to represent the annotated data in a Neo4J graph database.
+1. **Load** - In the load step, raw (meta)data is loaded and transformed into a format that can be understood and manipulated by Dug
+2. **Annotate** - The annotate step leverages [Monarch Initiative APIs](https://api.monarchinitiative.org/api/) to perform named entity recognition on natural language prose to extract ontology identifiers (concepts) from the source datasets (e.g. study metadata, harmonized variable metadata, COPDGene DICOM images, etc.). It also uses Translator normalization services to find preferred identifiers and [Biolink upper ontology](https://biolink.github.io/biolink-model/) types for each extracted identifier.
+3. **Crawl** - The concepts generated in the annotate step are then 'crawled', i.e. preconfigured queries using each concept are sent to TranQL (Translator Query Language) to find connected concepts.  The Biolink upper ontology enables the queries to be configured in a language that TranQL understands. Translator services enable TranQL queries that span TOPMed, [ROBOKOP](https://researchsoftwareinstitute.github.io/data-translator/apps/robokop), [ICEES](https://researchsoftwareinstitute.github.io/data-translator/apps/icees), and other reasoners to output knowledge graph.  The resulting knowledge grpah answers enable Dug to perform semantic search as well as link out to related biological concepts that could create unique insight.
+4. **Index** - After the crawl step, the three Dug data structures are indexed - variables (from the load step), concepts (from the annotate step), and the knowledge graph answers returend from query.  These structures are indexed as documents in separate indices of Elasticsearch.
+5. **Search** - Dug employs a REST API to enable full-text, semantic search of the documents indexed within Elasticsearch.
 
-Dug's **integration** phase uses Translator's Plater and Automat to generate a Reasoner Standard API compliant service and integrates that service into TranQL. This enables queries that span TOPMed, ROBOKOP, and other reasoners.
+The methodology, from start to finish, reads raw metadata, annotates it with ontological terms, normalizes those terms, runs queries based on these terms along pre-configured lines, turns the resulting metadata, annotations, and knowledge graphs into documents, and indexes those documents in a full text search engine.
 
-Dug's **indexing & search** phase query the graph infrastructure and analyze the resulting graphs. These are used to create documents associating natural language terms with annotations and the annotated variables and studies.
-![image](https://user-images.githubusercontent.com/306971/76716786-dc7f8c80-6707-11ea-9571-069f27dc5a23.png)
+**TODO: Update Image of Dug Framework**
 
-Dug will then generate Translator knowledge sources for the annotated variables and present them for query via TranQL.
+## Development
+### Overview
+A docker-compose is provided that runs five services:
+* Redis
+* Neo4J
+* Elasticsearch
+* The Dug Search OpenAPI
+* [The Dug Search Client](https://github.com/helxplatform/dug-search-client)
 
-## Knowledge Graphs
+The first four services run in one container, and the search client runs in a separate container.
 
-Dug's core data structure is the knowledge graph. Here's a query of a COPDGene knowledge graph created by Dug from harmonized TOPMed variables.
+This system can be started with the following command:
 
-![image](https://user-images.githubusercontent.com/306971/77009445-513c0c00-693e-11ea-83ed-722ec896d3e9.png)
-**Figure 1**: A Biolink knowledge graph of COPDGene metadata. It shows the relationship between the biological process "Sleep" and a meta variable. The highlighted node is aTOPMed meta variable or harmonized variable. It is in turn associated with variables connected to two studies in the data set. By linking additional ontological terms to the biological process sleep, we will be able to provde progressively more helpful search results rooted in curated biomedical knowledge.
+| Command             | Description                | Example          |
+| ------------------- | -------------------------- | ---------------- |
+| bin/dug stack       | Runs all services          | bin/dug stack up |
 
-And one more example to illustrate the knowledge model we use to inform the search index:
-![image](https://user-images.githubusercontent.com/306971/77230029-b9ba0180-6b67-11ea-9ccf-748955aa1931.png)
-**Figure 2**: The TOPMed harmonized variable is highlighted, showing its relationships with the ontology term for Heart Failure and the Heart Failure and with a specific study variable. Several similar disease, harmonized variable, variable, study relationships are also shown.
+**Developers:** Internal to bin/dug, an environment file is automatically created. That file is in `docker/.env`.
+If you are running in development, and are not using a public IP address and hostname, you'll want to create a separate `.env` file to allow programs to connect to the docker containers as services. This matters if, for example, you want to run bin/test, as the clients in that test need to know how to connect to each of the services they call. Copy the generated `docker/.env` to `docker/.env.dev`. Change all hostnames (`NEO4J_HOST`, `ELASTIC_API_HOST`, `REDIS_HOST`) to `localhost`.That should do it. Be sure to keep the generated passwords from the generated .env the same. 
 
-These graphs are used to create the document's well add to the search index to power full text search.
+Similarly, when spinning up the Dug Search Client locally, the .env file in the dug-search-client repo most be changed to the following:
+```
+REACT_APP_DUG_URL=http://localhost:5551
+CLIENT_PORT=80
+```
 
-In phase 1, we use Neo4J to build queries. In subsequent phases, we integrate other semantic services using TranQL.
+This ensures that the Dug Search Client connects to the local Dug Search OpenAPI instead of one of the user-facing deployments
 
-![image](https://user-images.githubusercontent.com/306971/77681466-bcec2d80-6f6b-11ea-93c5-87eee57d4b66.png)
-**Figure 3**: A TranQL knowledge graph query response. Integrating TOPMed harmonized variables as a Translator service called by TranQL allows us to query the federation of Translator ontological connections as a precursor to indexing. This includes chemical, phenotypic, disease, cell type, genetic, and other ontologies from sources like [ROBOKOP](https://researchsoftwareinstitute.github.io/data-translator/apps/robokop) as well as clinical aggregate data from sources like [ICEES](https://researchsoftwareinstitute.github.io/data-translator/apps/icees). The image above shows a query linking cholesterol to "LDL in Blood" a harmonized TOPMed variable. That variable is, in turn, linked to source variables and each of those is linked to its source study.
+### Local Deployment
+User-facing deployments of Dug exist, however to test new functionality it is best to spin up a local deployment. The following steps detail deployment of Dug on a local machine.  These steps assume that the repository has been cloned, the virtual environment has been created per the `requirements.txt` file, and commands are being entered in the command line at the /dug repository.
 
-## Approach
+**Start System, Activate Virtual Environment**
 
-The methodology, from start to finish, reads raw data, annotates it with ontological terms, normalizes those terms, inserts them into a queryable knowledge graph, queries that graph along pre-configured lines, turns the resulting knowledge graphs into documents, and indexes those documents in a full text search engine.
+* Start the system in headless mode: `bin/dug stack up -d`
+* Activate the virtual environment: `source venv/bin/activate`
+
+**File Management**
+
+* Unzip the tarball at dug/data: `COPYFILE_DISABLE=1 tar -xf data/data_dicts_with_gapexchange.tar -C ./data`
+* Make the directory to house study metadata: `mkdir ./data/gapexchange`
+* Move all of the study metadata files to this directory: `find ./data/data -type f -name 'GapExchange*' -exec mv -t ./data/gapexchange {} +`
+
+**Crawl**
+
+In the current instantiation of Dug, 'crawl' refers to the combined process of loading data into Dug, annotating it, running queries on the concepts coming from annotation, and indexing the results in Elasticsearch for later query.  Currently the order of operatations matters here; perform them in the steps listed below.
+
+* Crawl dbGaP variables: `bin/dug crawl_dir data/data`
+* Crawl TOPMed variables: `bin/dug crawl_by_concept --crawl-file ./data/topmed_variables_v1.0.csv`
+* Crawl study metadata files to update variable metadata: `bin/dug crawl_dir data/gapexchange`
+
+The run-time of crawl locally is quite long, on the order of hours.
+
+## The Dug Data Development Kit (DDK)
+
+**TODO: Do we need this section?**
+
+Dug provides a tool chain for the ingest, annotation, knowledge graph representation, query, crawling, indexing, and search of datasets with metadata. The following sections provide an overview of the relevant components.
 
 ### Link
-
-Link ingests raw dbGaP study metadata and performs semantic annotation by
+(Note: Link is a depcrecated component of the Dug Framework)
+Link ingests raw dbGaP study metadata and performs semantic annotation by:
 * Parsing a TOPMed data dictionary XML file to extract variables.
 * Using the Monarch SciGraph named entity recognizer to identify ontology terms.
-* Using the Translator SRI identifier normalization service to
+* Using the Translator SRI identifier normalization service to:
   * Select a preferred identifier for the entity
   * Determine the BioLink types applying to each entity
 * Writing each variable with its annotations as a JSON object to a file.
 
 ### Load
-
+(Note: Load is a deprecated component of the Dug Framework)
 * Converts the annotation format written in the steps above to a KGX graph
 * Inserts that graph into a Neo4J database.
 
@@ -61,7 +115,7 @@ In phase-1, we query Neo4J to create knowledge graphs. In phase-2 we'll use the 
 
 ### Crawl
 
-* Runs those graph queries and caches knowledge graph responses.
+* Runs graph queries to TranQL and caches knowledge graph responses in Redis.
 
 ### Index
 
@@ -73,10 +127,6 @@ In phase-1, we query Neo4J to create knowledge graphs. In phase-2 we'll use the 
 
 * Presents an OpenAPI compliant REST interface
 * Provides a scalable microservice suitable as an Internet endpoint. 
-
-## The Dug Data Development Kit (DDK)
-
-Dug provides a tool chain for the ingest, annotation, knowledge graph representation, query, crawling, indexing, and search of datasets with metadata. The following sections provide an overview of the relevant components.
 
 ### Ingest
 
@@ -134,24 +184,9 @@ To call the API endpoint using curl:
 | ------------------- | --------------------- | ------------------------- |
 | bin/dug query_api   | Call the REST API.    | bin/dug query_api {query} |
 
-## Development
-
-A docker-compose is provided that runs four services:
-* Redis
-* Neo4J
-* Elasticsearch
-* The Dug search OpenAPI
-
-This system can be started with the following command:
-
-| Command             | Description                | Example          |
-| ------------------- | -------------------------- | ---------------- |
-| bin/dug stack       | Runs all services          | bin/dug stack    |
-
-**Developers:** Internal to bin/dug, an environment file is automatically created. That file is in `docker/.env`.
-If you are running in development, and are not using a public IP address and hostname, you'll want to create a separate .env file to allow programs to connect to the docker containers as services. This matters if, for example, you want to run bin/test, as the clients in that test need to know how to connect to each of the services they call. Copy the generated docker/.env to docker/.env.dev. Change all hostnames to `localhost`. That should do it. Be sure to keep the generated passwords from the generated .env the same. 
-
 ## Testing
+**TODO: Do we need to update this section in the code?**
+
 
 Dug's automated functional tests:
 * Delete the test index
@@ -170,7 +205,6 @@ Once the test is complete, a command line search shows the contents of the index
 
 ## Python Testing
 * To run the python unit tests, type: `bin/dug pytests`
-
 
 ## Data Formats
 
