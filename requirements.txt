@@ -17,6 +17,8 @@ Jinja2==2.11.3
 jsonschema==3.2.0
 MarkupSafe==1.1.1
 mistune==0.8.4
+openpyxl==3.0.7
+pandas
 pluggy==0.13.1
 pyrsistent==0.17.3
 pytest==6.2.2

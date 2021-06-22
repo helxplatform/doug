@@ -22,9 +22,13 @@ class DugElement:
         self.collection_action = ""
         self.concepts = {}
         self.ml_ready_desc = desc
+        self.linked_elements = []
 
     def add_concept(self, concept):
         self.concepts[concept.id] = concept
+
+    def add_linked_element(self, element):
+        self.linked_elements.append(element)
 
     def jsonable(self):
         return self.__dict__
