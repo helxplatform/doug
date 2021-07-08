@@ -304,7 +304,9 @@ class Normalizer(ApiClient[Identifier, Identifier]):
     def make_request(self, value: Identifier, http_session: Session) -> dict:
         curie = value.id
         url = f"{self.url}{urllib.parse.quote(curie)}"
-        normalized = http_session.get(url).json()
+        response = http_session.get(url)
+        logger.debug(f"make_request^response: {len(response)} {response}")
+        normalized = response.json() # normalized = http_session.get(url).json()
         return normalized
 
     def handle_response(self, identifier: Identifier, normalized: dict) -> Identifier:

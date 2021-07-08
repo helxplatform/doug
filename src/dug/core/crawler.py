@@ -84,14 +84,16 @@ class Crawler:
 
     def annotate_elements(self):
 
+        logger.info(f"len(elements): {len(self.elements)}")
         # Annotate elements/concepts and create new concepts based on the ontology identifiers returned
-        for element in self.elements:
+        #for element in self.elements:
+        for n, element in enumerate(self.elements):
             # If element is actually a pre-loaded concept (e.g. TOPMed Tag), add that to list of concepts
             if isinstance(element, DugConcept):
                 self.concepts[element.id] = element
 
             # Annotate element with normalized ontology identifiers
-            self.annotate_element(element)
+            self.annotate_element(element, n)
             if isinstance(element, DugElement):
                 element.set_search_terms()
 
@@ -115,7 +117,10 @@ class Crawler:
             for concept_to_add in concepts_to_add:
                 element.add_concept(concept_to_add)
 
-    def annotate_element(self, element):
+    def annotate_element(self, element, n):
+
+        logger.info(f"element #{n}")
+
         # Annotate with a set of normalized ontology identifiers
         identifiers = self.annotator.annotate(text=element.ml_ready_desc,
                                               http_session=self.http_session)

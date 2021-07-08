@@ -5,6 +5,7 @@ import pluggy
 
 from ._base import DugElement, DugConcept, Indexable, Parser, FileParser
 from .dbgap_parser import DbGaPParser
+from .nida_parser import NidaParser
 from .topmed_tag_parser import TOPMedTagParser
 from .topmed_csv_parser import TOPMedCSVParser
 
@@ -16,6 +17,7 @@ hookimpl = pluggy.HookimplMarker("dug")
 @hookimpl
 def define_parsers(parser_dict: Dict[str, Parser]):
     parser_dict["dbgap"] = DbGaPParser()
+    parser_dict["nida"] = NidaParser()
     parser_dict["topmedtag"] = TOPMedTagParser()
     parser_dict["topmedcsv"] = TOPMedCSVParser()
 

@@ -56,7 +56,7 @@ services:
   ##
   #################################################################################
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.0
     networks:
       - dug-network
     environment:
