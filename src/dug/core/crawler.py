@@ -93,7 +93,7 @@ class Crawler:
                 self.concepts[element.id] = element
 
             # Annotate element with normalized ontology identifiers
-            self.annotate_element(element, n)
+            self.annotate_element(element, n, len(self.elements))
             if isinstance(element, DugElement):
                 element.set_search_terms()
 
@@ -117,9 +117,9 @@ class Crawler:
             for concept_to_add in concepts_to_add:
                 element.add_concept(concept_to_add)
 
-    def annotate_element(self, element, n):
+    def annotate_element(self, element, n, ntot):
 
-        logger.info(f"element #{n}")
+        logger.info(f"annotate_element #{n}/{ntot}")
 
         # Annotate with a set of normalized ontology identifiers
         identifiers = self.annotator.annotate(text=element.ml_ready_desc,
