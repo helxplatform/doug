@@ -140,10 +140,19 @@ class Search:
                 raise e
 
     def index_doc(self, index, doc, doc_id):
-        self.es.index(
-            index=index,
-            id=doc_id,
-            body=doc)
+        #optterms = doc['optional_terms']
+        #if len(optterms) == 0:
+        #    del doc['optional_terms']
+        #    print('deleted optional_terms')
+        try:
+            self.es.index(
+                index=index,
+                id=doc_id,
+                body=doc)
+        except Exception as e:
+                print('doc:',doc)
+                logger.error(f"exception: {e}")
+                raise e
 
     def update_doc(self, index, doc, doc_id):
         self.es.update(

@@ -1,4 +1,5 @@
 import logging
+import os
 import re
 from typing import List
 from xml.etree import ElementTree as ET
@@ -14,6 +15,13 @@ class DbGaPParser(FileParser):
 
     @staticmethod
     def parse_study_name_from_filename(filename: str):
+        stemname = os.path.splitext( os.path.basename(filename) )[0]
+        if stemname.startswith("NIDA-"):
+            sn = stemname
+            for s in ["-Dictionary", "_DD"]:
+                sn = sn.removesuffix(s) if sn.endswith(s) else sn
+            return sn
+
         # Parse the study name from the xml filename if it exists. Return None if filename isn't right format to get id from
         dbgap_file_pattern = re.compile(r'.*/*phs[0-9]+\.v[0-9]\.pht[0-9]+\.v[0-9]\.(.+)\.data_dict.*')
         match = re.match(dbgap_file_pattern, filename)
@@ -26,7 +34,7 @@ class DbGaPParser(FileParser):
         tree = ET.parse(input_file)
         root = tree.getroot()
         study_id = root.attrib['study_id']
-        participant_set = root.attrib['participant_set']
+        participant_set = root.get('participant_set','0')
 
         # Parse study name from file handle
         study_name = self.parse_study_name_from_filename(str(input_file))
@@ -46,8 +54,11 @@ class DbGaPParser(FileParser):
                               collection_name=study_name)
 
             # Create DBGaP links as study/variable actions
-            elem.collection_action = utils.get_dbgap_study_link(study_id=elem.collection_id)
-            elem.action = utils.get_dbgap_var_link(study_id=elem.collection_id,
+            if study_name.startswith("NIDA-"):
+                elem.collection_action = utils.get_nida_study_link(study_id=study_id)
+            else:
+                elem.collection_action = utils.get_dbgap_study_link(study_id=elem.collection_id)
+                elem.action = utils.get_dbgap_var_link(study_id=elem.collection_id,
                                                    variable_id=elem.id.split(".")[0].split("phv")[1])
             # Add to set of variables
             logger.debug(elem)

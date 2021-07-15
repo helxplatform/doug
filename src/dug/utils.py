@@ -30,3 +30,7 @@ def get_dbgap_var_link(study_id, variable_id):
 def get_dbgap_study_link(study_id):
     base_url = "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi"
     return f'{base_url}?study_id={study_id}'
+
+def get_nida_study_link(study_id):
+    base_url = "https://datashare.nida.nih.gov/study"
+    return f'{base_url}/{study_id}'
