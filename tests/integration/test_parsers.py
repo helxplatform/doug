@@ -7,6 +7,9 @@ def test_db_gap_parser():
     parse_file = str(TEST_DATA_DIR / "phs000166.v2.pht000700.v1.CAMP_CData.data_dict_2009_09_03.xml")
     elements = parser(parse_file)
     assert len(elements) > 0
+    parse_file = str(TEST_DATA_DIR / "NIDA-CPU0008-Dictionary.xml")
+    elements = parser(parse_file)
+    assert len(elements) > 0
 
 
 def test_topmed_tag_parser():

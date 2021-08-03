@@ -1,0 +1,3794 @@
+<data_table id="NIDA-CPU-0008" study_id="NIDA-CPU-0008">
+  <variable id="NIDA-CPU-0008.v1">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v2">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v3">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v4">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v5">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v6">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v7">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v8">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v9">
+    <name>AEANYAE</name>
+    <description>Has the subject had any Adverse Events during the time period evaluated?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v10">
+    <name>AELINENO</name>
+    <description>Line #</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v11">
+    <name>AENAME</name>
+    <description>Adverse Event</description>
+    <type />
+    <length>100</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v12">
+    <name>AESTART</name>
+    <description>Start Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v13">
+    <name>AESTARTM</name>
+    <description>Start Month</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v14">
+    <name>AESTARTD</name>
+    <description>Start Day</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v15">
+    <name>AESTARTY</name>
+    <description>Start Year</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v16">
+    <name>AESTOP</name>
+    <description>Stop Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v17">
+    <name>AESTOPM</name>
+    <description>Stop Month</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v18">
+    <name>AESTOPD</name>
+    <description>Stop Day</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v19">
+    <name>AESTOPY</name>
+    <description>Stop Year</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v20">
+    <name>AESEVERE</name>
+    <description>Severity</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v21">
+    <name>AERELATE</name>
+    <description>Related</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v22">
+    <name>AEACTION</name>
+    <description>Action Taken Regarding Study Drug</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v23">
+    <name>AEOTHER</name>
+    <description>Other Action Taken</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v24">
+    <name>AEOUTCOM</name>
+    <description>Outcome</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v25">
+    <name>AESERIOS</name>
+    <description>SAE?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v26">
+    <name>SAETYPE</name>
+    <description>Type of SAE (If other, specify)</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v27">
+    <name>SAEOTH</name>
+    <description>Type of SAE: Other</description>
+    <type />
+    <length>50</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v28">
+    <name>AESOC</name>
+    <description>System organ class code</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v29">
+    <name>AESOCLIT</name>
+    <description>Literal term of system organ class</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v30">
+    <name>AEPT</name>
+    <description>Preferred term code</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v31">
+    <name>AEPTLIT</name>
+    <description>Preferred term</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v32">
+    <name>MEDDRAVR</name>
+    <description>MedDRA (lowest level term) code</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v33">
+    <name>MEDDRA</name>
+    <description>Lowest level term of MedDRA</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v34">
+    <name>MEDDRAV</name>
+    <description>MedDRA version</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v35">
+    <name>SIGNYN</name>
+    <description>Signature</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v36">
+    <name>SIGNDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v37">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v38">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v39">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v40">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v41">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v42">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v43">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v44">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v45">
+    <name>TIMEPNT</name>
+    <description>Time Point</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v46">
+    <name>SAMPDT</name>
+    <description>Date of sample (mm/dd/yy)</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v47">
+    <name>SAMPTM</name>
+    <description>Time of Sample (use 24-hour clock)</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v48">
+    <name>TUBECODE</name>
+    <description>Tube Code</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v49">
+    <name>STUDYID</name>
+    <description>A unique number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v50">
+    <name>SITEID</name>
+    <description>The number assigned to a site for the study</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v51">
+    <name>SUBJID</name>
+    <description>Subject Identification</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v52">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v53">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v54">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v55">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v56">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v57">
+    <name>BSCSDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v58">
+    <name>BSCSTM</name>
+    <description>Actual Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v59">
+    <name>INTENSE</name>
+    <description>Intensity</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v60">
+    <name>FREQ</name>
+    <description>Frequency</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v61">
+    <name>LENGTH</name>
+    <description>Length of time</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v62">
+    <name>NUMBR</name>
+    <description>Number of times</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v63">
+    <name>MINUTES</name>
+    <description>Minutes craving</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v64">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v65">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v66">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v67">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v68">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v69">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v70">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v71">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v72">
+    <name>ASDATE</name>
+    <description>Assessment date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v73">
+    <name>ANALYTE</name>
+    <description>Analyte</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v74">
+    <name>QUANTITY</name>
+    <description>Quantity</description>
+    <type />
+    <length />
+  </variable>
+  <variable id="NIDA-CPU-0008.v75">
+    <name>CHEMUNIT</name>
+    <description>Unit</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v76">
+    <name>CHEMRSLT</name>
+    <description>Result</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v77">
+    <name>COMMNT</name>
+    <description>Comments (if abnormal)</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v78">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v79">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v80">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v81">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v82">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v83">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v84">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v85">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v86">
+    <name>LINENO</name>
+    <description>Line Number</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v87">
+    <name>COMMDT</name>
+    <description>Date of comment</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v88">
+    <name>COMMAPPL</name>
+    <description>This comment applies to</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v89">
+    <name>VISITDT</name>
+    <description>Visit date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v90">
+    <name>COMMNT1</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v91">
+    <name>COMMNT2</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v92">
+    <name>COMMNT3</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v93">
+    <name>COMMNT4</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v94">
+    <name>COMMNT5</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v95">
+    <name>COMMNT6</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v96">
+    <name>SIGNYN</name>
+    <description>Signature</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v97">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v98">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v99">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v100">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v101">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v102">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v103">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v104">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v105">
+    <name>CMANYMED</name>
+    <description>Has the subject taken any concomitant medications during this study?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v106">
+    <name>CMLINENO</name>
+    <description>Line</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v107">
+    <name>CMNAME</name>
+    <description>Medication</description>
+    <type />
+    <length>100</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v108">
+    <name>CMDOSE</name>
+    <description>Quantity</description>
+    <type />
+    <length>30</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v109">
+    <name>CMUNIT</name>
+    <description>Unit of Medication</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v110">
+    <name>CMFREQ</name>
+    <description>Frequency</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v111">
+    <name>CMROUTE</name>
+    <description>Route of Administration</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v112">
+    <name>CMSTRTDT</name>
+    <description>Start Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v113">
+    <name>CMSTRTM</name>
+    <description>Start Month</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v114">
+    <name>CMSTRTD</name>
+    <description>Start Day</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v115">
+    <name>CMSTRTY</name>
+    <description>Start Year</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v116">
+    <name>CMSTOPDT</name>
+    <description>Stop Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v117">
+    <name>CMSTOPM</name>
+    <description>Stop Month</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v118">
+    <name>CMSTOPD</name>
+    <description>Stop Day</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v119">
+    <name>CMSTOPY</name>
+    <description>Stop Year</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v120">
+    <name>CMCONT</name>
+    <description>Continuing? (check if yes)</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v121">
+    <name>CMINDCTN</name>
+    <description>Indication</description>
+    <type />
+    <length>100</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v122">
+    <name>MDCODE</name>
+    <description>WHO code</description>
+    <type />
+    <length>11</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v123">
+    <name>WHONAME</name>
+    <description>WHO name</description>
+    <type />
+    <length>80</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v124">
+    <name>ATCCODE</name>
+    <description>Anatomical therapeutic classification code</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v125">
+    <name>ATCLIT</name>
+    <description>Literal term of anatomical therapeutic classification</description>
+    <type />
+    <length>110</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v126">
+    <name>WHOVR</name>
+    <description>WHO version</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v127">
+    <name>SIGNYN</name>
+    <description>Signature</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v128">
+    <name>SIGNDT</name>
+    <description>Signature Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v129">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v130">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v131">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v132">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v133">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v134">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v135">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v136">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v137">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v138">
+    <name>GENDER</name>
+    <description>Gender</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v139">
+    <name>AGE</name>
+    <description>Age</description>
+    <type />
+    <length />
+  </variable>
+  <variable id="NIDA-CPU-0008.v140">
+    <name>BIRTHYR</name>
+    <description>Year of Birth</description>
+    <type />
+    <length />
+  </variable>
+  <variable id="NIDA-CPU-0008.v141">
+    <name>ETHNCTY</name>
+    <description>Ethnicity (regardless of race)</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v142">
+    <name>MEXICAN</name>
+    <description>Mexican, Mexican-American, or Chicano</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v143">
+    <name>PUERTO</name>
+    <description>Puerto Rican</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v144">
+    <name>CUBAN</name>
+    <description>Cuban</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v145">
+    <name>SCAMRCAN</name>
+    <description>South or Central American</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v146">
+    <name>ETHOTH</name>
+    <description>Other</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v147">
+    <name>ETHOTHX</name>
+    <description>Other, specify</description>
+    <type />
+    <length>50</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v148">
+    <name>MAJRRACE</name>
+    <description>Indicate which single major race applies and mark all that apply within the single race selected</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v149">
+    <name>MJRRACEX</name>
+    <description>Major Race - Other, specify</description>
+    <type />
+    <length>50</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v150">
+    <name>ASIANIND</name>
+    <description>Asian Indian</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v151">
+    <name>CHINESE</name>
+    <description>Chinese</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v152">
+    <name>FILIPINO</name>
+    <description>Filipino</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v153">
+    <name>JAPANESE</name>
+    <description>Japanese</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v154">
+    <name>KOREAN</name>
+    <description>Korean</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v155">
+    <name>VIETNAM</name>
+    <description>Vietnamese</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v156">
+    <name>ASIANOTH</name>
+    <description>Asian Other</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v157">
+    <name>ASIANOT1</name>
+    <description>Asian Other, specify</description>
+    <type />
+    <length>50</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v158">
+    <name>HAWAIIAN</name>
+    <description>Native Hawaiian</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v159">
+    <name>GUAMAN</name>
+    <description>Guamannian or Chamorro</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v160">
+    <name>SAMOAN</name>
+    <description>Samoan</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v161">
+    <name>PCFOTH</name>
+    <description>Pacific Islander - Other</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v162">
+    <name>PCFOTHX</name>
+    <description>Pacific Islander - Other specify</description>
+    <type />
+    <length>50</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v163">
+    <name>RACENONE</name>
+    <description>Participant chooses not to answer</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v164">
+    <name>PRIMYRS</name>
+    <description>Primary/secondary education completed</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v165">
+    <name>CLGYRS</name>
+    <description>College completed</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v166">
+    <name>PGYRS</name>
+    <description>Postgraduate studies completed</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v167">
+    <name>EMPLOY30</name>
+    <description>Usual Employment Pattern , past 30 Days</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v168">
+    <name>EMPLOY3Y</name>
+    <description>Usual Employment Pattern,  past 3 Years</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v169">
+    <name>MARITAL</name>
+    <description>Marital Status</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v170">
+    <name>VALCD</name>
+    <description>Validity code</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v171">
+    <name>DEVIATN</name>
+    <description>Protocol deviation</description>
+    <type />
+    <length>40</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v172">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v173">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v174">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v175">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v176">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v177">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v178">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v179">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v180">
+    <name>METHDT1</name>
+    <description>Methamphetamine Dose #1 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v181">
+    <name>METHDT2</name>
+    <description>Methamphetamine Dose #2 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v182">
+    <name>METHDT3</name>
+    <description>Methamphetamine Dose #3 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v183">
+    <name>METHDT4</name>
+    <description>Methamphetamine Dose #4 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v184">
+    <name>MODAFDT1</name>
+    <description>Modafinil Dose #1 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v185">
+    <name>MODAFDT2</name>
+    <description>Modafinil Dose #2 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v186">
+    <name>MODAFDT3</name>
+    <description>Modafinil Dose #3 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v187">
+    <name>MODAFDT4</name>
+    <description>Modafinil Dose #4 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v188">
+    <name>MODAFDT5</name>
+    <description>Modafinil Dose #5 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v189">
+    <name>MODAFDT6</name>
+    <description>Modafinil Dose #6 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v190">
+    <name>MODAFDT7</name>
+    <description>Modafinil Dose #7 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v191">
+    <name>MODAFDT8</name>
+    <description>Modafinil Dose #8 Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v192">
+    <name>METHTM1</name>
+    <description>Methamphetamine Dose #1 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v193">
+    <name>METHTM2</name>
+    <description>Methamphetamine Dose #2 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v194">
+    <name>METHTM3</name>
+    <description>Methamphetamine Dose #3 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v195">
+    <name>METHTM4</name>
+    <description>Methamphetamine Dose #4 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v196">
+    <name>MODAFTM1</name>
+    <description>Modafinil Dose #1 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v197">
+    <name>MODAFTM2</name>
+    <description>Modafinil Dose #2 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v198">
+    <name>MODAFTM3</name>
+    <description>Modafinil Dose #3 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v199">
+    <name>MODAFTM4</name>
+    <description>Modafinil Dose #4 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v200">
+    <name>MODAFTM5</name>
+    <description>Modafinil Dose #5 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v201">
+    <name>MODAFTM6</name>
+    <description>Modafinil Dose #6 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v202">
+    <name>MODAFTM7</name>
+    <description>Modafinil Dose #7 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v203">
+    <name>MODAFTM8</name>
+    <description>Modafinil Dose #8 Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v204">
+    <name>ARRVTM2</name>
+    <description>Time of arrival</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v205">
+    <name>ARRVTM3</name>
+    <description>Time of arrival</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v206">
+    <name>ARRVTM4</name>
+    <description>Time of arrival</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v207">
+    <name>ARRVTM5</name>
+    <description>Time of arrival</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v208">
+    <name>ARRVTM6</name>
+    <description>Time of arrival</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v209">
+    <name>ARRVTM7</name>
+    <description>Time of arrival</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v210">
+    <name>DEPRTM2</name>
+    <description>Time of departure</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v211">
+    <name>DEPRTM3</name>
+    <description>Time of departure</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v212">
+    <name>DEPRTM4</name>
+    <description>Time of departure</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v213">
+    <name>DEPRTM5</name>
+    <description>Time of departure</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v214">
+    <name>DEPRTM6</name>
+    <description>Time of departure</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v215">
+    <name>DEPRTM7</name>
+    <description>Time of departure</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v216">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v217">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v218">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v219">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v220">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v221">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v222">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v223">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v224">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v225">
+    <name>INCLUS1</name>
+    <description>1. Subject is methamphetamine experienced but not dependent, aged 18 to 45 years.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v226">
+    <name>INCLUS2</name>
+    <description>2. Body mass index (BMI) between 18 and 30.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v227">
+    <name>INCLUS3</name>
+    <description>3. Willing and able to give written consent.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v228">
+    <name>INCLUS4</name>
+    <description>4. Not in the follow-up period of a preceding drug research study.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v229">
+    <name>INCLUS5</name>
+    <description>5. No medical contraindications from the medical history, physical examination including vital signs, 12-lead ECG, hematology, blood chemistry and urinalysis.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v230">
+    <name>INCLUS6</name>
+    <description>6. Use of an acceptable method of birth control.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v231">
+    <name>INCLUS7</name>
+    <description>7. Negative drug test (barbiturates, benzodiazepines, amphetamines, opiates, cocaine and ethanol).</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v232">
+    <name>INCLUS8</name>
+    <description>8. Negative pregnancy test at screening.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v233">
+    <name>EXCLUS1</name>
+    <description>9. History of hematological, hepatic, respiratory, cardiovascular, renal or CNS disease or any other medical condition that is capable of altering  the metabolism or elimination of drugs or of constituting a risk factor when taking the study drug.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v234">
+    <name>EXCLUS2</name>
+    <description>10. Recent history of methamphetamine or other drug addiction and/or alcoholism.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v235">
+    <name>EXCLUS3</name>
+    <description>11. Any medical condition that could relapse during or immediately after the study, and in the investigator&#8217;s opinion, interferes with study evaluations or affects a subject&#8217;s safety.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v236">
+    <name>EXCLUS4</name>
+    <description>12. Significant acute or chronic medical disease.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v237">
+    <name>EXCLUS5</name>
+    <description>13. On standard 12-lead ECG, a QTc interval &gt;440 msec for males or &gt;450 msec for females</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v238">
+    <name>EXCLUS6</name>
+    <description>14. Likely to need concomitant treatment medication during the study period.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v239">
+    <name>EXCLUS7</name>
+    <description>15. Blood donation during the 30 days preceding study entry.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v240">
+    <name>EXCLUS8</name>
+    <description>16. Tobacco smoker or non-smoker for less than 3 months; i.e., a recent change in smoking status.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v241">
+    <name>EXCLUS9</name>
+    <description>17. Alcohol consumption averaging &gt; 40 g daily during the past 30 days.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v242">
+    <name>EXCLUS10</name>
+    <description>18. Coffee (or tea) consumption &gt; 6 cups (6 x 0.24 L) per day or xanthine containing drinks &gt; 1 liter/day (e.g. cola drinks, etc.).</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v243">
+    <name>EXCLUS11</name>
+    <description>19. No adequate means of contaacting the investigator in case of emergency or not able to be contacted readily by the invesigator.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v244">
+    <name>EXCLUS12</name>
+    <description>20. Female who is pregnant, lactating or plans to become pregnant during the study period and within one month after study drug administration.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v245">
+    <name>EXCLUS13</name>
+    <description>21. Exposure to any investigational new drug within 30 days of screening.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v246">
+    <name>EXCLUS14</name>
+    <description>22. Regular use of any prescription or over-the-counter drugs.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v247">
+    <name>EXCLUS15</name>
+    <description>23. Use of any herbal products likely to induce or inhibit hepatic microsomal enzyme CYP 2D6 within one month of the start of the study, including St. John&#8217;s wort (Hypericum perforatum).</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v248">
+    <name>ELGBLE</name>
+    <description>24. Is the subject eligible for study participation? </description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v249">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v250">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v251">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v252">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v253">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v254">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v255">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v256">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v257">
+    <name>TIMEPNT</name>
+    <description>Time Point</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v258">
+    <name>ECGDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v259">
+    <name>ECGTIME</name>
+    <description>Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v260">
+    <name>QTC</name>
+    <description>QTc interval</description>
+    <type />
+    <length>4,3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v261">
+    <name>RESULTS</name>
+    <description>ECG overall results were</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v262">
+    <name>ABNORM</name>
+    <description>If ECG is abnormal, please list ALL abnormalities</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v263">
+    <name>PRECLUDE</name>
+    <description>Do any of the abnormalities preclude safe entry into or continuation in the study?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v264">
+    <name>EXCLUSE</name>
+    <description>If yes, please list the abnormalities that are exclusionary</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v265">
+    <name>COMMNT</name>
+    <description>If ECG is abnormal, please specify and provide comments below</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v266">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v267">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v268">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v269">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v270">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v271">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v272">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v273">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v274">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v275">
+    <name>LASTVSDT</name>
+    <description>Date of final clinic visit</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v276">
+    <name>TERMINT</name>
+    <description>Was subject terminated early from the trial?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v277">
+    <name>COMPLETE</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject completed study.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v278">
+    <name>INELIGBL</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject was determined after enrollment to be ineligible. (Provide comments)</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v279">
+    <name>WITHDREW</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject requested to withdraw. (Provide comments)</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v280">
+    <name>MEDICAL</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject experienced intercurrent illness, unrelated medical condition, or clinically significant adverse events which, in the judgment of the investigator, promped early termination. (If subject experienced adverse event(s), an Adverse Event Case Report Form(s) must be completed.) (Provide comments.)</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v281">
+    <name>ADMIN</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject terminated for administrative reasons. Include protocol non-compliance in this category.  (Provide Comments)</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v282">
+    <name>INCAR</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject was incarcerated.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v283">
+    <name>PREGNANT</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject became pregnant.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v284">
+    <name>SENSITIV</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject developed sensitivity to study agent.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v285">
+    <name>LOSTFU</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject was lost to follow-up.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v286">
+    <name>MOVEAWAY</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject moved from area.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v287">
+    <name>DIED</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject died.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v288">
+    <name>NOATTEND</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject no longer attends lab.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v289">
+    <name>CONENVIR</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject is in a controlled environment.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v290">
+    <name>SCRNFAIL</name>
+    <description>Reason subject's participation has ended (mark all that apply): Subject is a screen failure.</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v291">
+    <name>OTHER</name>
+    <description>Reason subject's participation has ended (mark all that apply): Other (Provide comments)</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v292">
+    <name>COMMNT1</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v293">
+    <name>COMMNT2</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v294">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v295">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v296">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v297">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v298">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v299">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v300">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v301">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v302">
+    <name>ASDATE</name>
+    <description>Assessment date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v303">
+    <name>BLOODCT</name>
+    <description>Analyte</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v304">
+    <name>QUANTITY</name>
+    <description>Quantity</description>
+    <type />
+    <length />
+  </variable>
+  <variable id="NIDA-CPU-0008.v305">
+    <name>STDUNIT</name>
+    <description>Unit</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v306">
+    <name>ABNORM</name>
+    <description>IF abnormal, check one</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v307">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v308">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v309">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v310">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v311">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v312">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v313">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v314">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v315">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v316">
+    <name>TIMEPNT</name>
+    <description>Time Point</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v317">
+    <name>ACTIME</name>
+    <description>Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v318">
+    <name>MAP</name>
+    <description>Mean Arterial Pressure</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v319">
+    <name>CARDIND</name>
+    <description>Cardiac Index</description>
+    <type />
+    <length>5,2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v320">
+    <name>CARDOUT</name>
+    <description>Cardiac Output</description>
+    <type />
+    <length>5,2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v321">
+    <name>STROKIND</name>
+    <description>Stroke Index</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v322">
+    <name>STROKVOL</name>
+    <description>Stroke Volume</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v323">
+    <name>SVRIND</name>
+    <description>Systemic Vascular Res. Index</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v324">
+    <name>SVR</name>
+    <description>Systemic Vascular Resistance</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v325">
+    <name>ACCIND</name>
+    <description>Acceleration Index</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v326">
+    <name>VELIND</name>
+    <description>Velocity Index</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v327">
+    <name>TFC</name>
+    <description>Thoracic Fluid Content</description>
+    <type />
+    <length>5,2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v328">
+    <name>LCWIND</name>
+    <description>Left Cardiac Work Index</description>
+    <type />
+    <length>5,2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v329">
+    <name>LCW</name>
+    <description>Left Cardiac Work Index</description>
+    <type />
+    <length>5,2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v330">
+    <name>STR</name>
+    <description>Systolic Time Ratio</description>
+    <type />
+    <length>5,2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v331">
+    <name>PEP</name>
+    <description>Pre-ejection Period</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v332">
+    <name>LVET</name>
+    <description>Left Ventricular Ejection Time</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v333">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v334">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v335">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v336">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v337">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v338">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v339">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v340">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v341">
+    <name>INFCON</name>
+    <description>Did subject sign informed consent?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v342">
+    <name>INFCONDT</name>
+    <description>If yes, date subject signed informed consent</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v343">
+    <name>ENTERED</name>
+    <description>Was the subject entered into the study?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v344">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v345">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v346">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v347">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v348">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v349">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v350">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v351">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v352">
+    <name>TUBECODE</name>
+    <description>Tube Code</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v353">
+    <name>AMPH</name>
+    <description>Amphetamine in Human Plasma (ng/ml)</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v354">
+    <name>METH</name>
+    <description>Methamphetamine in Human Plasma (ng/ml)</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v355">
+    <name>MODAF</name>
+    <description>Modafinil in Human Plasma (ng/ml)</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v356">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v357">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v358">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v359">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v360">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v361">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v362">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v363">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v364">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v365">
+    <name>DRGALRSP</name>
+    <description>Allergies, drug (specify)</description>
+    <type />
+    <length>30</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v366">
+    <name>DRGALRGY</name>
+    <description>Allergies, drug  </description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v367">
+    <name>DRGALRGX</name>
+    <description>Explain or Describe allergy, drug</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v368">
+    <name>ALRGYSP</name>
+    <description>Allergies, other specify</description>
+    <type />
+    <length>30</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v369">
+    <name>ALRGYOT</name>
+    <description>Allergies, other</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v370">
+    <name>ALRGYOTX</name>
+    <description>Explain or Describe allergy, other</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v371">
+    <name>ASTHMA</name>
+    <description>History of asthma</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v372">
+    <name>ASTHMAX</name>
+    <description>Explain or Describe history of asthma</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v373">
+    <name>HEENT</name>
+    <description>HEENT Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v374">
+    <name>HEENTX</name>
+    <description>Explain or Describe HEENT Description</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v375">
+    <name>CARDIO</name>
+    <description>Cardiovascular Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v376">
+    <name>CARDIOX</name>
+    <description>Explain or Describe Cardiovascular Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v377">
+    <name>RENAL</name>
+    <description>Renal Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v378">
+    <name>RENALX</name>
+    <description>Explain or Describe Renal Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v379">
+    <name>HEPATIC</name>
+    <description>Hepatic Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v380">
+    <name>HEPATICX</name>
+    <description>Explain or Describe Hepatic Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v381">
+    <name>PULMON</name>
+    <description>Pulmonary Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v382">
+    <name>PULMONX</name>
+    <description>Explain or Describe Pulmonary Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v383">
+    <name>GASTRO</name>
+    <description>Gastrointestinal Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v384">
+    <name>GASTROX</name>
+    <description>Explain or Describe Gastrointestinal Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v385">
+    <name>MUSCULO</name>
+    <description>Musculoskeletal Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v386">
+    <name>MUSCULOX</name>
+    <description>Explain or Describe Musculoskeletal Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v387">
+    <name>NEURO</name>
+    <description>Neurologic Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v388">
+    <name>NEUROX</name>
+    <description>Explain or Describe Neurologic Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v389">
+    <name>PSYCH</name>
+    <description>Psychiatric Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v390">
+    <name>PSYCHX</name>
+    <description>Explain or Describe Psychiatric Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v391">
+    <name>DERMA</name>
+    <description>Dermatologic Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v392">
+    <name>DERMAX</name>
+    <description>Explain or Describe Dermatologic Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v393">
+    <name>METAB</name>
+    <description>Metabolic Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v394">
+    <name>METABOX</name>
+    <description>Explain or Describe Metabolic Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v395">
+    <name>HEMAT</name>
+    <description>Hematologic Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v396">
+    <name>HEMATX</name>
+    <description>Explain or Describe Hematologic Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v397">
+    <name>ENDO</name>
+    <description>Endocrine Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v398">
+    <name>ENDOX</name>
+    <description>Explain or Describe Endocrine Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v399">
+    <name>GENIT</name>
+    <description>Genitourinary Disorder</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v400">
+    <name>GENITX</name>
+    <description>Specify of Describe Genitourinary Disorder</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v401">
+    <name>REPRO</name>
+    <description>Reproductive System</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v402">
+    <name>REPROX</name>
+    <description>Explain or Describe Reproductive System</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v403">
+    <name>SEIZURE</name>
+    <description>Seizure</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v404">
+    <name>SEIZUREX</name>
+    <description>Explain or Describe Seizure</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v405">
+    <name>INFDIS</name>
+    <description>Infectious Disease</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v406">
+    <name>INFDISX</name>
+    <description>Explain or Describe Infectious Disease</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v407">
+    <name>OTHER1SP</name>
+    <description>Other 1 (specify)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v408">
+    <name>OTHER1</name>
+    <description>Other 1</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v409">
+    <name>OTHER1X</name>
+    <description>Explain or Describe Other 1</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v410">
+    <name>OTHER2SP</name>
+    <description>Other 2 (specify)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v411">
+    <name>OTHER2</name>
+    <description>Other 2</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v412">
+    <name>OTHER2X</name>
+    <description>Explain or Describe Other 2</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v413">
+    <name>SURGERY</name>
+    <description>Has patient ever had any major surgery?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v414">
+    <name>SURG1</name>
+    <description>Type of Surgery 1</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v415">
+    <name>SURG1DT</name>
+    <description>Year of Surgery 1</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v416">
+    <name>SURG1REL</name>
+    <description>Is Surgery 1 relevant to study participation?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v417">
+    <name>SURG2</name>
+    <description>Type of Surgery 2</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v418">
+    <name>SURG2DT</name>
+    <description>Year of Surgery 2</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v419">
+    <name>SURG2REL</name>
+    <description>Is Surgery 2 relevant to study participation?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v420">
+    <name>SURG3</name>
+    <description>Type of Surgery 3</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v421">
+    <name>SURG3DT</name>
+    <description>Year of Surgery 3</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v422">
+    <name>SURG3REL</name>
+    <description>Is Surgery 3 relevant to study participation?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v423">
+    <name>SURG4</name>
+    <description>Type of Surgery 4</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v424">
+    <name>SURG4DT</name>
+    <description>Year of Surgery 4</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v425">
+    <name>SURG4REL</name>
+    <description>Is Surgery 4 Relevant to Study Participation?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v426">
+    <name>SURG5</name>
+    <description>Type of Surgery 5</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v427">
+    <name>SURG5DT</name>
+    <description>Year of Surgery 5</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v428">
+    <name>SURG5REL</name>
+    <description>Is Surgery 5 relevant to study participation?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v429">
+    <name>SURG6</name>
+    <description>Type of Surgery 6</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v430">
+    <name>SURG6DT</name>
+    <description>Year of Surgery 6</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v431">
+    <name>SURG6REL</name>
+    <description>Is Surgery 6 relevant to study participation?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v432">
+    <name>SURG7</name>
+    <description>Type of Surgery 7</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v433">
+    <name>SURG7DT</name>
+    <description>Year of Surgery 7</description>
+    <type />
+    <length>4</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v434">
+    <name>SURG7REL</name>
+    <description>Is Surgery 7 relevant to study participation?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v435">
+    <name>SMOKE</name>
+    <description>Does the subject smoke?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v436">
+    <name>CIGARDAY</name>
+    <description>If yes, how many cigarettes/day?</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v437">
+    <name>SMK3MTH</name>
+    <description>Has the subject smoked in the last 3 months?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v438">
+    <name>QUIT3MTH</name>
+    <description>If yes, did the subject quit within the last 3 months?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v439">
+    <name>QUITWHEN</name>
+    <description>If yes, when?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v440">
+    <name>COMMNT</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v441">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v442">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v443">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v444">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v445">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v446">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v447">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v448">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v449">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v450">
+    <name>HEIGHT</name>
+    <description>Height</description>
+    <type />
+    <length>4,1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v451">
+    <name>HEIGHTUN</name>
+    <description>Height, units</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v452">
+    <name>WEIGHT</name>
+    <description>Weight</description>
+    <type />
+    <length>4,1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v453">
+    <name>WEIGHTUN</name>
+    <description>Weight, units</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v454">
+    <name>BMI</name>
+    <description>BMI (kg/m2)</description>
+    <type />
+    <length>3,1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v455">
+    <name>ORAL</name>
+    <description>Oral (mouth)</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v456">
+    <name>ORALX</name>
+    <description>Oral (mouth), comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v457">
+    <name>HEADNECK</name>
+    <description>Head and Neck</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v458">
+    <name>HEADNECX</name>
+    <description>Head and Neck, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v459">
+    <name>EENT</name>
+    <description>Eyes, ears, nose/throat</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v460">
+    <name>EENTX</name>
+    <description>Eyes, ears, nose/throat, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v461">
+    <name>CARDIO</name>
+    <description>Cardiovascular</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v462">
+    <name>CARDIOX</name>
+    <description>Cardiovascular, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v463">
+    <name>CHEST</name>
+    <description>Chest</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v464">
+    <name>CHESTX</name>
+    <description>Chest, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v465">
+    <name>LUNGS</name>
+    <description>Lungs</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v466">
+    <name>LUNGSX</name>
+    <description>Lungs, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v467">
+    <name>ABDOMEN</name>
+    <description>Abdomen (include liver/spleen)</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v468">
+    <name>ABDOMENX</name>
+    <description>Abdomen (include liver/spleen), comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v469">
+    <name>EXTREME</name>
+    <description>Extremities</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v470">
+    <name>EXTREMEX</name>
+    <description>Extremities, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v471">
+    <name>SKINHAIR</name>
+    <description>Skin, hair, nails</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v472">
+    <name>SKINHAIX</name>
+    <description>Skin, hair, nails, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v473">
+    <name>NEUROPS</name>
+    <description>Neuropsychiatric mental status</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v474">
+    <name>NEUROPSX</name>
+    <description>Neuropsychiatric mental status, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v475">
+    <name>MUSCULO</name>
+    <description>Musculoskeletal</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v476">
+    <name>MUSCULOX</name>
+    <description>Musculoskeletal, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v477">
+    <name>GENAPP</name>
+    <description>General appearance</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v478">
+    <name>GENAPPX</name>
+    <description>General appearance, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v479">
+    <name>OTHER1</name>
+    <description>Other</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v480">
+    <name>OTHER1SP</name>
+    <description>Other (specify)</description>
+    <type />
+    <length>20</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v481">
+    <name>OTHER1X</name>
+    <description>Other, comments</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v482">
+    <name>BPSYS</name>
+    <description>Blood pressure (mmHg)</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v483">
+    <name>BPDIA</name>
+    <description>Blood pressure (mmHg)</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v484">
+    <name>HEART</name>
+    <description>Heart Rate (beats/min)</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v485">
+    <name>RESP</name>
+    <description>Respiration Rate (breaths/min)</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v486">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v487">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v488">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v489">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v490">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v491">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v492">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v493">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v494">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v495">
+    <name>ACTIME1</name>
+    <description>Actual time pre-dose</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v496">
+    <name>ACTIME2</name>
+    <description>Actual time post dose</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v497">
+    <name>TENSION1</name>
+    <description>Tension pre-dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v498">
+    <name>TENSION2</name>
+    <description>Tension 4 hours post dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v499">
+    <name>DEPRES1</name>
+    <description>Depression pre-dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v500">
+    <name>DEPRES2</name>
+    <description>Depression 4 hours post dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v501">
+    <name>ANGER1</name>
+    <description>Anger pre-dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v502">
+    <name>ANGER2</name>
+    <description>Anger 4 hours post dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v503">
+    <name>VIGOR1</name>
+    <description>Vigor pre-dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v504">
+    <name>VIGOR2</name>
+    <description>Vigor 4 hours post dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v505">
+    <name>FATIGUE1</name>
+    <description>Fatigue pre-dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v506">
+    <name>FATIGUE2</name>
+    <description>Fatigue 4 hours post dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v507">
+    <name>CONFUS1</name>
+    <description>Confusion pre-dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v508">
+    <name>CONFUS2</name>
+    <description>Confusion 4 hours post dose</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v509">
+    <name>TOTAL1</name>
+    <description>Total mood pre-dose</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v510">
+    <name>TOTAL2</name>
+    <description>Total mood 4 hours post dose</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v511">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v512">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v513">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v514">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v515">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v516">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v517">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v518">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v519">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v520">
+    <name>BRCONTRL</name>
+    <description>Is the subject currently using an acceptable method of birth control?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v521">
+    <name>BRMETHOD</name>
+    <description>What method of birth control is participant currently using?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v522">
+    <name>PREGTEST</name>
+    <description>Was a pregnancy test performed?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v523">
+    <name>TSTRESLT</name>
+    <description>If yes, what was the result?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v524">
+    <name>LACTAT</name>
+    <description>Is the subject lactating? </description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v525">
+    <name>COMMNT</name>
+    <description>Comments</description>
+    <type />
+    <length>200</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v526">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v527">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v528">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v529">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v530">
+    <name>TRTMT</name>
+    <description>Treatment assgined code</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v531">
+    <name>XTRTMT</name>
+    <description>Treatment assigned description</description>
+    <type />
+    <length>25</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v532">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v533">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v534">
+    <name>SUBJID</name>
+    <description>Unique number assigned to each subject</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v535">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v536">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v537">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v538">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v539">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v540">
+    <name>ACTDATE</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v541">
+    <name>ACTIME</name>
+    <description>Actual time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v542">
+    <name>WILLCONT</name>
+    <description>1. Is subject willing to continue taking the medication?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v543">
+    <name>HEADACHE</name>
+    <description>2. Has subject developed a headache since the last dose?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v544">
+    <name>UNUSEVER</name>
+    <description>3. Is the headache unusually severe and persistent?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v545">
+    <name>VOMIT</name>
+    <description>4. Is the headache associated with vomiting?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v546">
+    <name>VISUAL</name>
+    <description>5. Is the headache associated with any visual symptoms?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v547">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v548">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v549">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v550">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v551">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v552">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v553">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v554">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v555">
+    <name>SAMPDT</name>
+    <description>Collection date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v556">
+    <name>GLUCOSE</name>
+    <description>Glucose Value</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v557">
+    <name>GLUCRSLT</name>
+    <description>Is the glucose value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v558">
+    <name>GLUCCMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v559">
+    <name>BILIRBIN</name>
+    <description>Bilirubin Value</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v560">
+    <name>BILIRSLT</name>
+    <description>Is the Bilrubin value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v561">
+    <name>BILICMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v562">
+    <name>KETONES</name>
+    <description>Ketones value</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v563">
+    <name>KETORSLT</name>
+    <description>Is the Ketones value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v564">
+    <name>KETOCMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v565">
+    <name>GRAVITY</name>
+    <description>Specific Gravity value</description>
+    <type />
+    <length>4,3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v566">
+    <name>GRAVRSLT</name>
+    <description>Is Specific Gravity value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v567">
+    <name>GRAVCMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v568">
+    <name>HEMOG</name>
+    <description>Hemoglobin value</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v569">
+    <name>HEMGRSLT</name>
+    <description>Is the Hemoglobin value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v570">
+    <name>HEMGCMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v571">
+    <name>PH</name>
+    <description>PH Value</description>
+    <type />
+    <length>2,1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v572">
+    <name>PHRLST</name>
+    <description>Is the PH value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v573">
+    <name>PHCMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v574">
+    <name>PROTEIN</name>
+    <description>Protein Value</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v575">
+    <name>PROTRSLT</name>
+    <description>Is the protein value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v576">
+    <name>PROTCMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v577">
+    <name>NITRITE</name>
+    <description>Nitrite Value</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v578">
+    <name>NITRSLT</name>
+    <description>Is the Nitrite value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v579">
+    <name>NITRCMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v580">
+    <name>LE</name>
+    <description>Leukocyte Esterase Value</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v581">
+    <name>LERSLT</name>
+    <description>Is the Leukocyte Esterase value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v582">
+    <name>LECMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v583">
+    <name>RBC</name>
+    <description>RBC value</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v584">
+    <name>RBCRSLT</name>
+    <description>Is the RBC value normal?</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v585">
+    <name>RBCCMNT</name>
+    <description>Comment (if abnormal)</description>
+    <type />
+    <length>120</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v586">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v587">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v588">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v589">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v590">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v591">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v592">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v593">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v594">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v595">
+    <name>METHAMP</name>
+    <description>Methamphetamines/amphetamines</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v596">
+    <name>BARB</name>
+    <description>Barbiturates</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v597">
+    <name>BENZO</name>
+    <description>Benzodiazepines</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v598">
+    <name>COCAINE</name>
+    <description>Cocaine</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v599">
+    <name>ETHANOL</name>
+    <description>Ethanol</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v600">
+    <name>OPIATE</name>
+    <description>Opiate</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v601">
+    <name>THC</name>
+    <description>THC</description>
+    <type />
+    <length>1</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v602">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v603">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v604">
+    <name>SUBJID</name>
+    <description>Subject ID #</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v605">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v606">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v607">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v608">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v609">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v610">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v611">
+    <name>TIMEPNT</name>
+    <description>Time point</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v612">
+    <name>ACTIME</name>
+    <description>Actual time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v613">
+    <name>DRGEFCT</name>
+    <description>Any Drug Effect</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v614">
+    <name>GDRGET</name>
+    <description>Good Drug Effect</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v615">
+    <name>BDRGET</name>
+    <description>Bad Drug Effect</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v616">
+    <name>NERVOUS</name>
+    <description>Nervous</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v617">
+    <name>TOLERBLE</name>
+    <description>Tolerable</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v618">
+    <name>STUDYID</name>
+    <description>A unique four-digit number assigned by NIDA to each protocol, preceded by a character prefix.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v619">
+    <name>SITEID</name>
+    <description>Site</description>
+    <type />
+    <length>6</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v620">
+    <name>SUBJID</name>
+    <description>Unique number assigned to each subject</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v621">
+    <name>VISID</name>
+    <description>Visit type ID according to the protocol.</description>
+    <type />
+    <length>16</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v622">
+    <name>VISSEQ</name>
+    <description>VisSeq is used in case 2 visits occur with only 1 scheduled.</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v623">
+    <name>FORMSEQ</name>
+    <description>FormSeq applies as pseudo PK when multiple readings in a "visit".</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v624">
+    <name>EPOCH</name>
+    <description>Coded number with code for dictionary, protocol specific</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v625">
+    <name>VISITDT</name>
+    <description>Date</description>
+    <type />
+    <length>10</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v626">
+    <name>FORMID</name>
+    <description>CRF number - assigned by data center.</description>
+    <type />
+    <length>8</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v627">
+    <name>TIMEPNT</name>
+    <description>Scheduled time</description>
+    <type />
+    <length>2</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v628">
+    <name>VSTIME</name>
+    <description>Actual Time</description>
+    <type />
+    <length>5</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v629">
+    <name>VSRESP</name>
+    <description>RR</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v630">
+    <name>VSHEART</name>
+    <description>HR</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v631">
+    <name>VSBPSYS</name>
+    <description>SBP</description>
+    <type />
+    <length>3</length>
+  </variable>
+  <variable id="NIDA-CPU-0008.v632">
+    <name>VSBPDIA</name>
+    <description>DBP</description>
+    <type />
+    <length>3</length>
+  </variable>
+</data_table>
