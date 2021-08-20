@@ -1,0 +1,78 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: annotate
+spec:
+  schedule: "1 0 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: dug
+            image: heliumdatastage/dug:develop-latest
+            imagePullPolicy: Always
+            env:
+            - name: ELASTIC_API_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: dug-configmap
+                  key: ELASTIC_API_HOST
+            - name: ELASTIC_API_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: dug-configmap
+                  key: ELASTIC_API_PORT
+            - name: ELASTIC_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: dug-configmap
+                  key: ELASTIC_USER
+            - name: ELASTIC_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: dug-secrets
+                  key: ELASTIC_PASSWORD
+            - name: NEO4J_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: dug-configmap
+                  key: NEO4J_HOST
+            - name: NEO4J_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: dug-configmap
+                  key: NEO4J_PORT
+            - name: NEO4J_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: dug-configmap
+                  key: NEO4J_USER
+            - name: NEO4J_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: dug-secrets
+                  key: NEO4J_PASSWORD
+            - name: REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: dug-configmap
+                  key: REDIS_HOST
+            - name: REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: dug-configmap
+                  key: REDIS_PORT
+            - name: REDIS_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: dug-configmap
+                  key: REDIS_USER
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: dug-secrets
+                  key: REDIS_PASSWORD
+            command: ["bin/dug-docker"]
+            args: ["index_tranql", "data/topmed_variables_v1.0.csv"]
+          restartPolicy: OnFailure

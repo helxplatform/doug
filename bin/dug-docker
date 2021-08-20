@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#############################################################
+##
+## Index_tranql: Gather knowledge graphs from TranQL, create indices, and add to search engine.
+##
+#############################################################
+index_tranql () {
+    python -m dug.core --tagged-crawl $*
+}
+
+$*
+
+exit 0
