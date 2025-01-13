@@ -18,7 +18,7 @@ class Config:
     elastic_host: str = "elasticsearch"
     elastic_port: int = 9200
     elastic_username: str = "elastic"
-    elastic_scheme: str = "http"
+    elastic_scheme: str = "https"
     elastic_ca_path: str = ""
 
     redis_host: str = "redis"
@@ -51,9 +51,9 @@ class Config:
             "sapbert": {
                 "classification_url": "https://med-nemo.apps.renci.org/annotate/",
                 "annotator_url": "https://sap-qdrant.apps.renci.org/annotate/",
-                "score_threshold": 0.5,
+                "score_threshold": 0.8,
                 "bagel": {
-                    "enabled": True,
+                    "enabled": False,
                     "url": "https://bagel.apps.renci.org/group_synonyms_openai",
                     "prompt": "bagel/ask_classes",
                     "llm_args": {
@@ -171,4 +171,6 @@ class Config:
             env_value = os.environ.get(env_var)
             if env_value:
                 kwargs[kwarg] = env_value
+                if kwarg in ['redis_port', 'elastic_port']:
+                    kwargs[kwarg] = int(env_value)
         return cls(**kwargs)

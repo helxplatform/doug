@@ -3,7 +3,9 @@ from typing import List
 from xml.etree import ElementTree as ET
 
 from dug import utils as utils
-from ._base import DugElement, FileParser, Indexable, InputFile
+from dug.core.parsers._base import DugElement, FileParser, Indexable, InputFile, DugConcept
+import json
+
 
 logger = logging.getLogger('dug')
 
@@ -11,26 +13,45 @@ logger = logging.getLogger('dug')
 class RADxParser(FileParser):
 
     def __call__(self, input_file: InputFile) -> List[Indexable]:
-        tree = ET.parse(input_file, ET.XMLParser(encoding='utf-8'))
-        root = tree.getroot()
-        study_id = root.attrib['id']        
-        # If still None, raise an error message
-        study_name = root.attrib['study_name']
+        with open(input_file) as stream:
+            json_raw_data = json.load(stream)
+        # get all records (records in radx json = variables)
+        records = json_raw_data['records']
         elements = []
-        for variable in root.iter('variable'):
-            desc = variable.find('description').text if variable.find('description') is not None else ''
-            desc = desc or ''
-            elem = DugElement(elem_id=f"{variable.attrib['id']}",
-                              name=variable.find('name').text,
-                              desc=desc,
-                              elem_type=root.attrib['module'],
-                              collection_id=f"{study_id}",
-                              collection_name=study_name)
+        for r in records:
+            if r['studies']:
+                concepts = r['terms'] or []
+                concepts_objs = []
+                for c in concepts:
+                    concept_obj = DugConcept(
+                        concept_id=c['identifier'],
+                        name=c['label'],
+                        concept_type="biolink:NamedThing",
+                        desc="",
+                    )
+                    concept_obj.search_terms = c['synonyms']
+                    concepts_objs.append(concept_obj)
 
-            # Create DBGaP links as study/variable actions
-            elem.collection_action = utils.get_dbgap_study_link(study_id=elem.collection_id)
-            logger.debug(elem)
-            elements.append(elem)
-
-        # You don't actually create any concepts
+                studies_dict = {x['id']: x for x in r['studies']}
+                for s_id, s in studies_dict.items():
+                    elem = DugElement(
+                        elem_id=r['id'],
+                        name=r['label'],
+                        desc=r['description'],
+                        elem_type=s['program'],
+                        collection_id=s['phs'],
+                        collection_name=s['study_name'],
+                        collection_action=f"https://radxdatahub.nih.gov/study/{s['id']}"
+                    )
+                    for c in concepts_objs:
+                        elem.add_concept(c)
+                    elem.add_metadata(
+                        {
+                            'datatype': r['datatype'] or None,
+                            'cardinality': r['cardinality'] or '',
+                            'section': r['section'] or '',
+                            'enumeration': r['enumeration'] or []
+                         }
+                    )
+                    elements.append(elem)
         return elements

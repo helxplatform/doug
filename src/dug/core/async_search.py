@@ -356,7 +356,8 @@ class Search:
                 "description": elem_s['element_desc'],
                 "e_link": elem_s['element_action'],
                 "id": elem_id,
-                "name": elem_s['element_name']
+                "name": elem_s['element_name'],
+                "metadata": elem_s.get('metadata', {})
             }
 
             if scored:

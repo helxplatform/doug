@@ -146,7 +146,11 @@ class Index:
                     "collection_desc": {"type": "text", "analyzer": "std_with_stopwords"},
                     "collection_action": {"type": "text", "analyzer": "std_with_stopwords"},
                     "data_type": {"type": "text", "analyzer": "std_with_stopwords",
-                                  "fields": {"keyword": {"type": "keyword"}}}
+                                  "fields": {"keyword": {"type": "keyword"}}},
+                    "metadata": {
+                        "type": "object",
+                        "dynamic": True
+                    }
                     # typed as keyword for bucket aggs
                 }
             }
@@ -203,15 +207,15 @@ class Index:
             doc_id=concept.id)
 
     def index_element(self, elem, index):
-        if not self.es.exists(index=index, id=elem.id):
+        if not self.es.exists(index=index, id=elem.get_id()):
             # If the element doesn't exist, add it directly
             self.index_doc(
                 index=index,
                 doc=elem.get_searchable_dict(),
-                doc_id=elem.id)
+                doc_id=elem.get_id())
         else:
             # Otherwise update to add any new identifiers that weren't there last time around
-            results = self.es.get(index=index, id=elem.id)
+            results = self.es.get(index=index, id=elem.get_id())
             identifiers = results['_source']['identifiers'] + list(elem.concepts.keys())
             doc = {"doc": {}}
             doc['doc']['identifiers'] = list(set(identifiers))

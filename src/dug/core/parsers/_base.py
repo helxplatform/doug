@@ -24,6 +24,9 @@ class DugElement:
         self.ml_ready_desc = desc
         self.search_terms = []
         self.optional_terms = []
+        self.metadata = {}
+
+
 
     def add_concept(self, concept):
         self.concepts[concept.id] = concept
@@ -46,9 +49,16 @@ class DugElement:
             'element_action': self.action,
             'collection_action': self.collection_action,
             'data_type': self.type,
+            'metadata': self.metadata,
             'identifiers': list(self.concepts.keys())
         }
         return es_elem
+
+    def add_metadata(self, metadata):
+        self.metadata = metadata
+
+    def get_id(self):
+        return f'{self.id}-{self.collection_id}'
 
     def set_search_terms(self):
         search_terms = []

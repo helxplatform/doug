@@ -121,6 +121,47 @@ async def search_var(search_query: SearchVariablesQuery):
     }
 
 
+@APP.post('/search_var_grouped')
+async def search_var_grouped(search_query: SearchVariablesQuery):
+    results = await search.search_variables(**search_query.dict(exclude={"index"}))
+    all_elements = []
+    for program_name in results:
+        studies = results[program_name]
+        for s in studies:
+            elements = s['elements']
+            for e in elements:
+                new_element = e
+                new_element.update(
+                    {k: v for k, v in s.items() if k != 'elements'}
+                )
+                new_element['program_name'] = program_name
+                all_elements.append(new_element)
+    # regroup by variables
+    by_id = {}
+    for e in all_elements:
+        by_id[e['id']] = by_id.get(e['id'], [])
+        by_id[e['id']].append(e)
+    var_info = None
+    study_info_keys = [
+        'c_id', 'c_link', 'c_name', 'program_name'
+    ]
+    final_variables = []
+    for var_id in by_id:
+        var_studies = by_id[var_id]
+        for s in var_studies:
+            if not var_info:
+                var_info = {
+                    k: v for k, v in s.items() if k not in study_info_keys
+                }
+                var_info.update(var_info['metadata'])
+                var_info.pop('metadata')
+                var_info['studies'] = []
+            study_data = {k: v for k, v in s.items() if k in study_info_keys}
+            var_info['studies'].append(study_data)
+        final_variables.append(var_info)
+        var_info = None
+    return final_variables
+
 
 @APP.get('/search_study')
 async def search_study(study_id: Optional[str] = None, study_name: Optional[str] = None):

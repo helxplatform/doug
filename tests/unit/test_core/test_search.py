@@ -15,7 +15,7 @@ port = 9200
 username = "elastic"
 password = "hunter2"
 nboost_host = "localhost"
-hosts = [{"host": host, "port": port, "scheme": "http"}]
+hosts = [{"host": host, "port": port, "scheme": "https"}]
 
 
 class MockEsNode:
@@ -110,6 +110,7 @@ def test_init(elastic):
         elastic_username="elastic",
         elastic_password="hunter2",
         nboost_host="localhost",
+        elastic_scheme="https"
     )
 
     search = Index(cfg)
